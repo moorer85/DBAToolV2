@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\DBATool.Data\DBATool.Data.csproj" />
+    <ProjectReference Include="..\DBATool.Service\DBATool.Service.csproj" />
+  </ItemGroup>
+
 </Project>
