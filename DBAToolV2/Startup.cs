@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DBATool.Data;
+using DBATool.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,6 +33,14 @@ namespace DBAToolV2
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            services.AddScoped<IDatabase, DatabaseService>();
+            services.AddScoped<IEmployee, EmployeeService>();
+            services.AddScoped<IServer, ServerService>();
+            services.AddScoped<IStatus, StatusService>();
+
+            services.AddDbContext<DBAToolDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DBAToolsConnection")));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -57,7 +68,7 @@ namespace DBAToolV2
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Server}/{action=Index}/{id?}");
             });
         }
     }
