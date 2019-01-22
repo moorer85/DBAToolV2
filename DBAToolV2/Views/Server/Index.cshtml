@@ -6,27 +6,53 @@
 }
 
 
-<h3>Patron Index</h3>
-<div id="patronIndex">
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp customTable" id="patronIndexTable">
+<h3>Server Index</h3>
+<div id="serverIndex">
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp customTable" id="serverIndexTable">
+                <tr  >
+                    <td id="serverIconPlus" align="center">
+                        <i class="fa  fa-2x">
+                            <a asp-controller="Server" asp-action="Detail" asp-route-id=""> Create New Server</a>
+                        </i>
+
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+        
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp customTable" id="serverIndexTable">
+
+
+
         <thead>
+
+
             <tr>
-                <th>Profile Link</th>
-                <th>Last Name</th>
-                <th>First Name</th>
-                <th>Library Card Id</th>
-                <th>Overdue Fees</th>
-                <th>Home Library</th>
+                <th>Edit</th>
+
+                <th>Name</th>
+                <th>Memory</th>
+                <th>CPU Core</th>
+                <th>CPU Speed</th>
+                <th>Name</th>
+
             </tr>
         </thead>
         <tbody>
             @foreach (var server in Model.Servers)
             {
                 <tr>
-                    <td id="patronIcon"><a asp-controller="Patron" asp-action="Detail" asp-route-id="@server.Id"><i class="fa fa-user fa-3x"></i></a></td>
+                    <td id="serverIconEdit"><a asp-controller="Server" asp-action="Detail" asp-route-id="@server.Id"><i class="fa fa-edit fa-3x"></i></a></td>
+
                     <td>@server.Name</td>
                     <td>@server.Memory</td>
-                    <td>@server.CpuCore/td>
+                    <td>@server.CpuCore</td>
                     <td>@server.CpuSpeed</td>
                     <td>@server.Name</td>
                 </tr>
