@@ -68,7 +68,7 @@ namespace DBAToolV2
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Server}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

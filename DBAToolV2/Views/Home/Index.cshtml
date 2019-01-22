@@ -1,8 +1,129 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h3>Welcome to DBATools</h3>
+
+<div class="mdl-grid">
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="/images/Server.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="catalog">
+                <h2 class="mdl-card__title-text homeLabel">Server Catalog</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage server assets.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Server" asp-action="Index">
+                    View Server  
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="/images/Instance.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="patrons">
+                <h2 class="mdl-card__title-text homeLabel">Instance</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage instance data.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Patron" asp-action="Index">
+                    View Instance Index
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="/images/Database.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="branches">
+                <h2 class="mdl-card__title-text homeLabel">Databases</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage Databases.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Branch" asp-action="Index">
+                    View Database Index
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="/images/Application1.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="catalog">
+                <h2 class="mdl-card__title-text homeLabel">Application</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage applications.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Server" asp-action="Index">
+                    View Application  
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="/images/Owner.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="patrons">
+                <h2 class="mdl-card__title-text homeLabel">Owner</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage owner data.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Patron" asp-action="Index">
+                    View Owner Index
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="=row">
+
+            <img src="~/images/Division.jpg" />
+        </div>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" id="branches">
+                <h2 class="mdl-card__title-text homeLabel">Division</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                View and manage Division.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored" asp-controller="Branch" asp-action="Index">
+                    View Division Index
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DBATool.Data;
+using DBATool.Data.Models;
 using DBAToolV2.Models.Server;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,5 +43,25 @@ namespace DBAToolV2.Controllers
             return View(model);
 
         }
+
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Server server)
+        {
+            if (ModelState.IsValid)
+            {
+              __serverService.Add(server);
+            }
+
+                return View(server);
+        }
+
+      
     }
 }
