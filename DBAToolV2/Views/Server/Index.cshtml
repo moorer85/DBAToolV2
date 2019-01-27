@@ -37,10 +37,11 @@
                 <th>Edit</th>
 
                 <th>Name</th>
-                <th>Memory</th>
-                <th>CPU Core</th>
-                <th>CPU Speed</th>
                 <th>Name</th>
+
+               
+
+
 
             </tr>
         </thead>
@@ -51,12 +52,16 @@
                     <td id="serverIconEdit"><a asp-controller="Server" asp-action="Detail" asp-route-id="@server.Id"><i class="fa fa-edit fa-3x"></i></a></td>
 
                     <td>@server.Name</td>
-                    <td>@server.Memory</td>
-                    <td>@server.CpuCore</td>
-                    <td>@server.CpuSpeed</td>
+         
+                   
                     <td>@server.Name</td>
                 </tr>
             }
         </tbody>
     </table>
+
+
+
+
+
 </div>
