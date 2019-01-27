@@ -18,7 +18,7 @@ namespace DBATool.Data.Models
 
         public float CpuSpeed { get; set; }
 
-        public DateTime PurchaseDate { get; set; } // Just store as an int for BC
+        public DateTime PurchaseDate { get; set; } 
       
         public Status Status { get; set; }
         public string ImageUrl { get; set; }

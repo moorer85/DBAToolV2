@@ -15,14 +15,14 @@ namespace DBATool.Data.Models
 
         public int Size { get; set; }
 
-        [Display(Name = "Database Owner")]
-        public Employee DatabaseOwner { get; set; }
+        //[Display(Name = "Database Owner")]
+        //public Employee DatabaseOwner { get; set; }
 
-        [Display(Name = "Primary DBA Support")]
-        public Employee PrimaryDBA { get; set; }
+        //[Display(Name = "Primary DBA Support")]
+        //public Employee PrimaryDBA { get; set; }
 
-        [Display(Name = "Backup DBA Support")]
-        public Employee BackupDBA { get; set; }
+        //[Display(Name = "Backup DBA Support")]
+        //public Employee BackupDBA { get; set; }
 
         public int NumberOfUsers { get; set; }
 
